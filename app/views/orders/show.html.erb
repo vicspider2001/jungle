@@ -5,9 +5,17 @@
   </header>
 
   <div class="order-summary jumbotron">
+    <% @order.line_items.each do |line_item| %>
+      <%= render partial: 'line_item', locals: { line_item: line_item } %>
+    <% end %>
+
+    <hr>
+
+    <h3>Order Summary</h3>
+    <p><strong>Final Amount:</strong> <%= humanized_money_with_symbol(@order.total_amount) %></p>
+    <p><strong>Email Used:</strong> <%= @order.email %></p>
     <h4>Thank you for your order!</h4>
   </div>
 
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+  
 
-</section>

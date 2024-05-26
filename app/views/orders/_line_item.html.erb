@@ -1,0 +1,17 @@
+<!-- app/views/orders/_line_item.html.erb -->
+
+<div class="row mb-3">
+  <div class="col-md-2">
+    <%= image_tag line_item.product.image, class: "img-fluid", alt: line_item.product.name %>
+  </div>
+  <div class="col-md-5">
+    <h4><%= line_items.product.name %></h4>
+    <p><%= line_items.product.description %></p>
+  </div>
+  <div class="col-md-2">
+    <p>Quantity: <%= line_items.quantity %></p>
+  </div>
+  <div class="col-md-3">
+    <p>Item Total: <%= humanized_money_with_symbol(line_items.total_price_cents / 100.0) %></p>
+  </div>
+</div>
