@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+    render :signup
   end
 
   def create
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Welcome, #{user.first_name}!"
     else
-      render :new
+      render :signup
     end
   end
 
@@ -19,3 +20,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
 end
+

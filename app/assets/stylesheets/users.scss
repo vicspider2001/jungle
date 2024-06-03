@@ -1,7 +1,4 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-/* General form styling */
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -32,9 +29,8 @@
   background-color: #0056b3;
 }
 
-/* Specific form styling */
-.form-signup,
-.form-login {
+/* Specific form styling for users */
+.form-signup {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -43,8 +39,7 @@
   background-color: #f9f9f9;
 }
 
-.form-signup h1,
-.form-login h1 {
+.form-signup h1 {
   text-align: center;
   margin-bottom: 20px;
 }
