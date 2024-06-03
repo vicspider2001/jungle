@@ -13,6 +13,17 @@
 
   <%= render 'layouts/top_nav' %>
 
+  <!-- New Navigation Bar -->
+   <!-- Flash Messages -->
+  <% if notice %>
+    <p><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p><%= alert %></p>
+  <% end %>
+
+
+
   <main class="container">
     <%= yield %>
   </main>
